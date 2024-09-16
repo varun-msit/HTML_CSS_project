@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="text-section">
+                <h1><span class="first-name">Varun</span> <span class="last-name">Kumar Reddy</span></h1>
+                <a href="#" class="get-in-touch" id="contactBtn">Get in Touch</a>
+            </div>
+            <div class="image-section">
+                <img src="photo.png" alt="Varun Kumar Reddy" class="profile-photo">
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#randr">Roles and Responsibilities</a></li>
+                <li><a href="#traits">Unique Traits</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="about" id="about">
+        <div class="section-container about-container">
+            <div class="about-content">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <p class="about-details">
+<p>Hello! I’m Varun Kumar Reddy, an enthusiastic Electronics and Communication Engineering (ECE) student currently pursuing a Master’s degree at MSIT. My journey is driven by a passion for tackling complex problems and crafting innovative solutions. I thrive on exploring new technologies and applying them to create impactful projects. My academic and project work reflect a commitment to pushing boundaries and embracing the latest advancements in the IT field.
+                </p>
+<p>In addition to my technical skills, I value the importance of effective communication and collaboration. I enjoy engaging with diverse professionals, exchanging ideas, and building strong networks. Whether it's working on team projects or attending industry events, I am always eager to connect with others and contribute to a collaborative environment. Outside of my academic and professional pursuits, I keep up with emerging tech trends and dedicate time to creative projects that fuel my curiosity and growth
+                </p>
+                
+                <a href="educa.html" class="btn">More About</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="container">
+            <h3>Education</h3>
+            <p>MSIT (2024-2026) - IIITH</p>
+            <p>B.Tech (2020-2024) - Vardhaman College</p>
+            <p>Intermediate (2018-2020) - Nano Junior College</p>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h3>Projects</h3>
+            <p>IOT-based Smart Gloves for Military Personnel Communication</p>
+            <p>IOT Irrigation Monitoring & Controller System</p>
+            <p>Line Following Robot</p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h3>Skills</h3>
+            <div class="skills-container">
+                <div class="skill" id="skill1">Python</div>
+                <div class="skill" id="skill2">HTML</div>
+                <div class="skill" id="skill3">CSS</div>
+                <div class="skill" id="skill4">GIT</div>
+                <div class="skill" id="skill5">Excel</div>
+                <div class="skill" id="skill6">Java</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="randr" id="randr">
+        <div class="container">
+            <h3>Roles and Responsibilities</h3>
+            <p>Lead Organizer for College Tech Fest</p>
+            <p>Project Lead for Campus Sustainability Initiative</p>
+            <p>School Captain </p>
+        </div>
+    </section>
+
+    <section class="traits" id="traits">
+        <div class="container">
+            <h3>Unique Traits</h3>
+            <div class="traits-container">
+                <div class="trait">
+                    <h4>Innovative Thinker</h4>
+                    <p>Constantly seeks creative solutions and approaches problems from unique angles. I enjoy brainstorming and finding unconventional methods to solve challenges.</p>
+                </div>
+                <div class="trait">
+                    <h4>Tech Enthusiast</h4>
+                    <p>Passionate about staying updated with the latest technologies and trends. I love experimenting with new tools and integrating them into my projects.</p>
+                </div>
+                <div class="trait">
+                    <h4>Team Player</h4>
+                    <p>Excellent at collaborating with others and thriving in team environments. I believe in the power of collective effort and always seek to contribute positively to team dynamics.</p>
+                </div>
+                <div class="trait">
+                    <h4>Detail-Oriented</h4>
+                    <p>Focused on precision and accuracy in my work. I pay close attention to details to ensure high-quality results and continuous improvement in my projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:varunkumar369963@gmail.com">varunkumar369963@gmail.com</a></p>
+            <p>Phone: <a href="tel:+91 7993387552">+91 7993387552</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Modal logic
+        const modal = document.getElementById("contactModal");
+        const btn = document.getElementById("contactBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
