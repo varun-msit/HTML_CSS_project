@@ -10,17 +10,21 @@
     <header class="header" id="header">
         <div class="container">
             <div class="text-section">
+                <br>
+            </br>
                 <h1><span class="first-name">Varun</span> <span class="last-name">Kumar Reddy</span></h1>
                 <a href="#" class="get-in-touch" id="contactBtn">Get in Touch</a>
             </div>
-            <div class="image-section">
-                <img src="photo.png" alt="Varun Kumar Reddy" class="profile-photo">
-            </div>
+            <!-- <div class="image-section">
+                <img src="" alt="Varun Kumar Reddy" class="profile-photo">
+            </div> -->
         </div>
     </header>
     
     <nav>
         <div class="navbar">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-button">☰</label> <!-- Toggle button -->
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
@@ -48,6 +52,8 @@
     </section>
 
     <section class="education" id="education">
+        <br>
+    </br>
         <div class="container">
             <h3>Education</h3>
             <p>MSIT (2024-2026) - IIITH</p>
@@ -57,6 +63,8 @@
     </section>
 
     <section class="projects" id="projects">
+        <br>
+    </br>
         <div class="container">
             <h3>Projects</h3>
             <p>IOT-based Smart Gloves for Military Personnel Communication</p>
@@ -66,6 +74,8 @@
     </section>
 
     <section class="skills" id="skills">
+        <br>
+    </br>
         <div class="container">
             <h3>Skills</h3>
             <div class="skills-container">
@@ -80,6 +90,8 @@
     </section>
 
     <section class="randr" id="randr">
+        <br>
+    </br>
         <div class="container">
             <h3>Roles and Responsibilities</h3>
             <p>Lead Organizer for College Tech Fest</p>
@@ -89,6 +101,8 @@
     </section>
 
     <section class="traits" id="traits">
+        <br>
+    </br>
         <div class="container">
             <h3>Unique Traits</h3>
             <div class="traits-container">
@@ -118,7 +132,7 @@
             <span class="close">&times;</span>
             <h2>Contact Information</h2>
             <p>Email: <a href="mailto:varunkumar369963@gmail.com">varunkumar369963@gmail.com</a></p>
-            <p>Phone: <a href="tel:+91 7993387552">+91 7993387552</a></p>
+            <!-- <p>Phone: <a href="tel:+91 7993387552">+91 7993387552</a></p> -->
         </div>
     </div>
 
@@ -142,5 +156,19 @@
             }
         }
     </script>
+    <!-- JavaScript -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-links li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove 'active' class from all links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
