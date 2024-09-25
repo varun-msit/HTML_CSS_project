@@ -78,36 +78,98 @@ body {
     object-fit: cover;
 }
 
+
+
 /* Navigation */
-nav {
+/* Navigation */
+.navbar {
     background-color: #004d99;
-    text-align: center;
-    padding: 10px 0;
+    align-items: center;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it is above other content */
+    padding: 12px 20px;
+    display: flex; /* Flex display for alignment */
+    justify-content: space-between; /* Space between toggle and items */
 }
 
 .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align items in a row */
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
-.navbar ul li {
-    display: inline-block;
-    margin: 0;
+.navbar li {
+    flex: 1; /* Evenly distribute space */
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: #231f46;
-    padding: 12px 20px;
-    display: inline-block;
-    transition: background 0.3s ease, color 0.3s ease;
+.navbar a {
+    display: block; /* Make links fill the list items */
+    padding: 15px 20px; /* Add padding */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.navbar ul li a:hover {
-    background-color: #00bcd4; /* Light blue on hover */
-    color: #ffffff;
+.navbar a:hover,
+.navbar a.active {
+    background-color: #00bcd4; /* Change background on hover or active */
 }
+.navbar a.active {
+    background-color: #00bcd4; /* Active link background color */
+    color: #ffffff; /* Active link text color */
+}
+
+/* Optional: Add styles for when links are hovered */
+.navbar a:hover {
+    background-color: #008c9e; /* Slightly darker on hover */
+}
+
+/* Responsive styles */
+.toggle-checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.toggle-button {
+    display: none; /* Hide the button by default */
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Increase font size for better visibility */
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .navbar ul {
+        display: none; /* Initially hide the menu */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width on small screens */
+        background-color: #004d99; /* Match background color */
+        position: absolute; /* Absolute positioning */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+    }
+
+    .toggle-checkbox:checked + .toggle-button + ul {
+        display: flex; /* Show menu when checkbox is checked */
+    }
+
+    .navbar li {
+        width: 100%; /* Make each item full width */
+    }
+}
+
+
 
 /* About Section */
 .about {
