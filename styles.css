@@ -120,15 +120,6 @@ body {
 .navbar a.active {
     background-color: #00bcd4; /* Change background on hover or active */
 }
-.navbar a.active {
-    background-color: #00bcd4; /* Active link background color */
-    color: #ffffff; /* Active link text color */
-}
-
-/* Optional: Add styles for when links are hovered */
-.navbar a:hover {
-    background-color: #008c9e; /* Slightly darker on hover */
-}
 
 /* Responsive styles */
 .toggle-checkbox {
